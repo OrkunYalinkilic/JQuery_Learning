@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div>
+
+        <ul>
+            <li> item 1</li>
+            <li> item 2</li>
+            <li> item 3</li>
+            <li> item 4</li>
+            <li> item 5</li>
+        </ul>
+
+        <button onclick="remove()"> remove ( sil ) </button>
+        <button onclick="empty()"> empty ( içeriği sil ) </button>
+
+        <script>
+
+            var index = 4;
+
+            function remove() {
+
+               // $("li").eq(index).remove();
+                $("li").eq(index).css("display", "none");
+                index--;
+
+                if (index < 0) {
+                    $("button").eq(0).css("display", "none");
+                }
+
+            }
+
+            index = 4;
+
+            function empty() {
+
+                $("li").eq(index).empty();
+                index--;
+
+                if (index < 0) {
+                    $("button").eq(1).css("display", "none");
+                }
+
+            }
+
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>

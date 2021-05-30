@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+             
+        div {
+            width: 50px;
+            height: 50px;
+            background: yellow;
+            text-align: center;
+            font-size: 25px;
+            transition: background-color 2s ease;
+        }
+
+        div:hover {
+            background: blue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+        $(function () {
+
+            $("div").click(function () {
+
+                $(this).text($(this).width() + " " + $(this).height());
+
+                $(this).animate({
+
+                    width: '+=50px',
+                    height: '+=50px'
+
+                }, 1000)
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

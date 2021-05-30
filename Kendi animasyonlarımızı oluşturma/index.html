@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<style>
+
+    div{
+        width:15px;
+        height: 20px;
+        background: orange;
+        text-align:center;
+        
+    }
+
+</style>
+
+</head>
+<body>
+    <div>0</div>
+
+    <script>
+
+        var x = $("div").text();
+       
+        $("div").animate({
+            
+            width:'150px',
+        
+        },10000);
+
+        function xDegistir(){
+            if(x<100){
+            x++;
+            $("div").text(x);
+        }
+    }
+        
+        setInterval(xDegistir,100);
+
+    </script>
+</body>
+</html>

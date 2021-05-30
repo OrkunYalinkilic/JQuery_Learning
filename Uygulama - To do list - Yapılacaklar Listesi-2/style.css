@@ -1,0 +1,15 @@
+.butonStil{
+
+    background: white;
+    border: none;
+    font-weight: bold;
+    color:red;
+    margin-left:15px;    
+}
+
+#cerceve{
+    border:2px solid blue;
+    display: inline-block;
+    margin:20px;
+    padding: 10px;
+}

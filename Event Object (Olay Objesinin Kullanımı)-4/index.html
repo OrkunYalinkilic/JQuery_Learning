@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <style>
+    
+    #parent, #parent2, #parent3{
+        width:50%;
+        height:200px;
+        background: yellow;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #child , #child2, #child3{
+        width:80%;
+        height:150px;
+        background: orange;
+        margin-top:10px;
+    }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="parent">
+        <div id="child">
+
+        </div>
+    </div>
+
+    <div id="parent2">
+        <div id="child2">
+
+        </div>
+    </div>
+
+    <div id="parent3">
+        <div id="child3">
+
+        </div>
+    </div>
+
+    <script>
+    
+    $("#child").click(function(event){
+        $("#child").parent().html("Child'e tıklandi..")
+    });
+
+    $("#child2").click(function(event){
+        $("#child2").parent().html("Child'e tıklandi..");
+    });
+
+        $("#child2").trigger("click");
+
+
+    $("#child3").click(function(event){
+        $("#child3").parent().html("Child'e tıklandi..")
+    });
+
+    setTimeout(function(){
+        $("#child3").trigger("click");
+    },3000)
+
+   /*setTimeOut(function(){
+        ...........
+    }),....)*/
+
+
+    </script>
+</body>
+</html>

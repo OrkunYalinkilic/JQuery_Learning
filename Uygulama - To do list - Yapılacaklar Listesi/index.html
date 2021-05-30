@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<style>
+
+.butonStil{
+
+    background: white;
+    border: none;
+    font-weight: bold;
+    color:red;
+    margin-left:15px;
+    cursor:pointer;
+    
+}
+
+#cerceve{
+    border:2px solid blue;
+    display: inline-block;
+    margin:20px;
+    padding: 10px;
+}
+
+</style>
+
+</head>
+<body>
+<div id="cerceve">
+
+    <h1>YAPILACAKLAR LİSTESİ</h1>
+
+    <input id="yapilacak" type="text" placeholder="Yapılacak işi giriniz">
+    <button id="ekle"> EKLE </button>
+    <ol id="yapilacakListesi"></ol>
+
+</div>
+
+<script>
+    $(function(){
+    $("#ekle").click(function(){
+      
+        var yapilacak = $("#yapilacak").val();
+      
+       if(yapilacak!=""){
+            var eklenecek = $("<li></li>").text(yapilacak);
+            var buton = $("<button class=\"butonStil\">X</button>")
+            eklenecek.append(buton);
+            $("#yapilacakListesi").append(eklenecek);
+            $("#yapilacak").val("");
+       }
+
+       buton.click(function(){
+
+            $(  this).parent().remove();
+
+       })
+
+    })
+
+})
+</script>
+
+</body>
+</html>

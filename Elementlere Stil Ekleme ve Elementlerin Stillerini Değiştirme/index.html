@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+        div {
+            width: 400px;
+            height: 250px;
+            border: 2px solid black;
+        }
+
+        button {
+            margin-left: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+    </div><br>
+    <button onclick="renkDegistir()">Renk Değiştir</button>
+    <button onclick="boyutDegistir()">Boyut Değiştir</button>
+
+    <script>
+        
+        function renkDegistir() {
+            $("div").css("background", "orange");
+        }
+
+        function boyutDegistir() {
+            $("div").css("width", "600px");
+            $("div").css("height", "400px");
+        }
+    </script>
+
+</body>
+
+</html>

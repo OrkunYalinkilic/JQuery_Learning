@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+    
+    div{
+        width:75%;
+        background:orange;
+        padding: 5px;
+    }
+    
+    p{
+        width:75%;
+        background:yellow;
+        color:darkblue;
+        font-size:20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, enim.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, modi!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, autem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, soluta!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nihil.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, impedit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, tempora?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, voluptatibus?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, nesciunt.
+    </div>
+
+    <p>Slide UP</p>
+    <p>Slide DOWN</p>
+    <p>Slide TOGGLE</p>
+
+    <script>
+    
+    $("p").eq(0).click(function(){
+        $("div").slideUp(2000);
+    })    
+    
+    $("p").eq(1).click(function(){
+        $("div").slideDown(2000);
+    })    
+    
+    $("p").eq(2).click(function(){
+        $("div").slideToggle(2000);
+    })    
+    
+    
+
+    </script>
+
+</body>
+</html>

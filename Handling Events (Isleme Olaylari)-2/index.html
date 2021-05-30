@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <input type="text">
+    <p id="pr"> </p>
+
+    <input type="text">
+    <p id="pr2"> </p>
+
+    <script>
+        
+        var inputBolumu = $("input").eq(0);
+        var paragrafBolumu = $("#pr");
+
+        inputBolumu.css("width","500px"); 
+
+        inputBolumu.keydown(function(){
+
+            paragrafBolumu.html(inputBolumu.val());
+
+        })
+
+        var inputBolumu2 = $("input").eq(1);
+        var paragrafBolumu2 = $("#pr2");
+
+        inputBolumu2.css("width","500px");
+        paragrafBolumu2.css("text-transform","uppercase");
+         
+
+        inputBolumu2.keydown(function(){
+
+            paragrafBolumu2.html(inputBolumu2.val());
+
+        })
+    
+    </script>
+
+
+
+</body>
+</html>

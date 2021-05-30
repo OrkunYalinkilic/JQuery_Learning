@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+#bir{
+    width:50%;
+    height:60px;
+    background:orange;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#iki{
+    width:50%;
+    height:60px;
+    background:turquoise;
+    color:black;
+    text-align: center;
+}
+
+#uc{
+    width:50%;
+    height:60px;
+    background:yellow;
+    color:black;
+    text-align: center;
+}
+
+#parent{
+
+    margin-top:10px;
+    width:50%;
+    height:220px;
+    background:yellow;
+    color:black;
+    text-align: center;
+
+}
+
+#child{
+    
+    width:80%;
+    height:120px;
+    background:pink;
+    color:black;
+    text-align: center;
+    margin:35px;
+}
+
+</style>
+
+<body>
+    
+<div id="bir"></div>
+<div id="iki">
+    <a href="https://www.google.com.tr" target="_blank">Google.com</a>
+</div>
+
+<div id="uc">
+    <a href="https://www.youtube.com" target="_blank">Youtube.com</a>
+</div>
+
+<div id="parent">
+    PARENT
+    <div id="child">
+        CHİLD
+    </div>  
+
+</div>
+
+<script>
+
+    $("#bir").click(function(event){
+
+        $("#bir").text(event.target.nodeName);
+
+    });
+
+    $("#iki").click(function(event){
+
+        $("#iki").html(event.type + "<br>" + event.target.nodeName );
+
+    });
+
+    $("#uc").click(function(event){
+
+        event.preventDefault();
+
+    }); 
+
+    $("#parent").click(function(){
+        
+        alert("PARENT")
+
+    });
+
+    $("#child").click(function(event){
+
+        alert("CHİLD")
+        event.stopPropagation();
+    });
+
+</script>
+
+</body>
+</html>

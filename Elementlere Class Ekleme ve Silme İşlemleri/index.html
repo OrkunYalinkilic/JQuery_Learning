@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+        .red {
+            background: red;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        div {
+            width: 50%;
+            height: 250px;
+            border: 3px solid yellow;
+        }
+
+        button {
+            margin-left: 21px;
+            font-weight: bold;
+        }
+
+        .border{
+            border:10px dashed brown;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div> </div>
+    <br>
+    <button onclick="kirmiziYap()"> Kırmızı Yap </button>
+    <button onclick="kirmiziSil()"> Kırmızı Sil </button>
+
+    <button onclick="maviYap()"> Mavi Yap </button>
+    <button onclick="maviSil()"> Mavi Sil </button>
+
+    <button onclick="yesilYap()"> Yeşil Yap </button>
+    <button onclick="yesilSil()"> Yeşil Sil </button>
+
+        <br><br>
+    <button onclick="yesilToggle()"> Yeşil varsa sil yoksa ekle </button>
+
+    <script>
+        function kirmiziYap() {
+            $("div").addClass("red").addClass("border");
+        }
+
+        function kirmiziSil() {
+            $("div").removeClass("red").removeClass("border ");
+        }
+
+        function maviYap() {
+            $("div").addClass("blue");
+        }
+
+        function maviSil() {
+            $("div").removeClass("blue");
+        }
+
+        function yesilYap() {
+            $("div").addClass("green");
+        }
+
+        function yesilSil() {
+            $("div").removeClass("green");
+        }
+
+        function yesilToggle() { 
+            $("div").toggleClass("green");
+        }
+
+    </script>
+
+
+</body>
+
+
+</html>

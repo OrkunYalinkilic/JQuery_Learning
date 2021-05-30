@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+    
+    #bir{
+        width:300px;
+        height:200px;
+        background:yellow;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #iki{
+        width:300px;
+        height:200px;
+        background:orange;
+        text-align: center;
+        font-weight: bold;
+    } 
+    </style>
+
+</head>
+<body>
+
+    <div id=bir></div>
+    <div id=iki></div>
+
+    <script>
+    
+        var birinci = $("#bir");
+        var ikinci = $("#iki");
+
+        birinci.click(function(event){
+            birinci.text(event.pageX + " " + event.pageY);
+        })
+
+        ikinci.mouseenter(function(event){
+            ikinci.text(event.type);
+        })
+
+        ikinci.mouseout(function(event){
+            ikinci.text(event.type);
+        })
+
+
+        ikinci.click(function(event){
+            ikinci.text(event.type);
+        })
+
+        ikinci.mousedown(function(event){
+            ikinci.text(event.type);
+        })
+    </script>
+
+</body>
+</html>

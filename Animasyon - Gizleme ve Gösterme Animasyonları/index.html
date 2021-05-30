@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            width: 80%;
+            height: 100px;
+            background: orange;
+            font-size: 20px;
+        }
+
+        p {
+            background: lightblue;
+            color: darkblue;
+            font-weight: bold;
+            font-size: 30px;
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione consequuntur harum quam illo error
+        autm. Consequuntur aliquid reprehenderit exercitationem, modi, ad soluta cupiditate fugiat possimus ex eius
+        eaque quaerat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione consequuntur harum quam illo error
+        autem. Consequuntur aliquid reprehenderit exercitationem, modi, ad soluta cupiditate fugiat possimus ex eius
+        eaque quaerat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione consequuntur harum quam illo error
+    </div>
+
+    <p>DİVİ AÇ(SHOW)</p>
+    <p>DİVİ KAPAT(HİDE)</p>
+    <p>DİVİ AÇ-KAPA (TOGGLE)</p>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione consequuntur harum quam illo error
+        autm. Consequuntur aliquid reprehenderit exercitationem, modi, ad soluta cupiditate fugiat possimus ex eius
+        eaque quaerat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione consequuntur harum quam illo error
+        autem. Consequuntur aliquid reprehenderit exercitationem, modi, ad soluta cupiditate fugiat possimus ex eius
+        eaque quaerat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione consequuntur harum quam illo error
+    </div>
+
+    <p>DİVİ AÇ(SHOW)(2sn)</p>
+    <p>DİVİ KAPAT(HİDE)(2sn)</p>
+    <p>DİVİ AÇ-KAPA (TOGGLE)(2sn)</p>
+
+
+
+    <script>
+
+        $("p").eq(0).click(function () {
+            $("div").eq(0).show();
+        })
+
+        $("p").eq(1).click(function () {
+            $("div").eq(0).hide();
+        })
+
+        $("p").eq(2).click(function () {
+            $("div").eq(0).toggle();
+        })
+
+        $("p").eq(3).click(function () {
+            $("div").eq(1).show(2000);
+        })
+
+        $("p").eq(4).click(function () {
+            $("div").eq(1).hide(2000);
+        })
+
+        $("p").eq(5).click(function () {
+            $("div").eq(1).toggle(2000);
+        })
+        
+    </script>
+
+</body>
+
+</html>
